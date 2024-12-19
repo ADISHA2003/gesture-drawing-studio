@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gesture Drawing Studio</title>
+  <link rel="stylesheet" href="draw.css">
+</head>
+<body>
+  <button id="toggle-webcam-btn">Turn On Webcam</button>
+  <div id="gesture-output">Draw with your index finger!</div>
+  <canvas id="canvas"></canvas>
+  <div id="video-container">
+    <video id="video" autoplay muted playsinline></video>
+  </div>
+  <div id="controls" style="display: none;">
+    <div>
+      <label for="color-picker">Brush Color</label>
+      <input type="color" id="color-picker" value="#000000">
+    </div>
+    <div>
+      <label for="brush-size">Brush Size (1-20)</label>
+      <input type="range" id="brush-size" min="1" max="20" value="5">
+    </div>
+    <button id="clear-btn">Clear Canvas</button>
+    <button id="undo-btn">Undo</button>
+    <button id="redo-btn">Redo</button>
+  </div>
+  <div id="finger-indicator"></div>
+  <button id="toggle-controls-btn">Controls</button>
+
+  <script type="module" src="draw.js"></script>
+</body>
+</html>
